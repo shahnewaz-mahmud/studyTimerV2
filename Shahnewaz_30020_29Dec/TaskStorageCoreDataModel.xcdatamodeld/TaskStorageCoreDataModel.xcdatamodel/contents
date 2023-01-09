@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ContactModel" representedClassName="ContactModel" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="userId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserModel" inverseName="contact" inverseEntity="UserModel"/>
+    </entity>
     <entity name="StudyTaskModel" representedClassName="StudyTaskModel" syncable="YES">
         <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -8,9 +13,19 @@
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="taskId" optional="YES" attributeType="String"/>
         <attribute name="topic" optional="YES" attributeType="String"/>
+        <relationship name="userId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserModel" inverseName="tasks" inverseEntity="UserModel"/>
+    </entity>
+    <entity name="UserModel" representedClassName="UserModel" syncable="YES">
+        <attribute name="fistName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="userId" optional="YES" attributeType="String"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContactModel" inverseName="userId" inverseEntity="ContactModel"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudyTaskModel" inverseName="userId" inverseEntity="StudyTaskModel"/>
     </entity>
     <elements>
         <element name="StudyTaskModel" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="UserModel" positionX="-63" positionY="45" width="128" height="119"/>
+        <element name="ContactModel" positionX="-45" positionY="72" width="128" height="74"/>
     </elements>
 </model>

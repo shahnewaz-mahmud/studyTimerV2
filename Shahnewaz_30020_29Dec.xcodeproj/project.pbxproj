@@ -12,8 +12,6 @@
 		35646E0E296AAC3E00D0A2B5 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35646E0D296AAC3E00D0A2B5 /* Plist.swift */; };
 		35646E10296ABF7C00D0A2B5 /* StartPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35646E0F296ABF7C00D0A2B5 /* StartPageVC.swift */; };
 		35646E13296B0D9300D0A2B5 /* TaskStorageCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35646E11296B0D9300D0A2B5 /* TaskStorageCoreDataModel.xcdatamodeld */; };
-		35646E23296B15DD00D0A2B5 /* StudyTaskModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35646E21296B15DD00D0A2B5 /* StudyTaskModel+CoreDataClass.swift */; };
-		35646E24296B15DD00D0A2B5 /* StudyTaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35646E22296B15DD00D0A2B5 /* StudyTaskModel+CoreDataProperties.swift */; };
 		35646E26296B163800D0A2B5 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35646E25296B163800D0A2B5 /* CoreDataHelper.swift */; };
 		35F717AF295DDC6E0059DA50 /* studying.json in Resources */ = {isa = PBXBuildFile; fileRef = 35F717AE295DDC6E0059DA50 /* studying.json */; };
 		35F717B1295DE3AE0059DA50 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F717B0295DE3AE0059DA50 /* TaskList.swift */; };
@@ -24,6 +22,12 @@
 		35F92DCE2969BD7200270F2F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F92DCD2969BD7200270F2F /* SignInVC.swift */; };
 		35F92DD12969D79F00270F2F /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F92DD02969D79F00270F2F /* Keychain.swift */; };
 		35F92DD4296A0DC200270F2F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F92DD3296A0DC200270F2F /* ProfileVC.swift */; };
+		8980F749296C2D2B00134BBF /* StudyTaskModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8980F743296C2D2B00134BBF /* StudyTaskModel+CoreDataClass.swift */; };
+		8980F74A296C2D2B00134BBF /* StudyTaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8980F744296C2D2B00134BBF /* StudyTaskModel+CoreDataProperties.swift */; };
+		8980F74B296C2D2B00134BBF /* ContactModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8980F745296C2D2B00134BBF /* ContactModel+CoreDataClass.swift */; };
+		8980F74C296C2D2B00134BBF /* ContactModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8980F746296C2D2B00134BBF /* ContactModel+CoreDataProperties.swift */; };
+		8980F74D296C2D2B00134BBF /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8980F747296C2D2B00134BBF /* UserModel+CoreDataClass.swift */; };
+		8980F74E296C2D2B00134BBF /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8980F748296C2D2B00134BBF /* UserModel+CoreDataProperties.swift */; };
 		89B9CC072966C5C600BA8EFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9CC062966C5C600BA8EFD /* User.swift */; };
 		89BF1C752962E28900B503B4 /* done.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BF1C742962E28900B503B4 /* done.json */; };
 		89D093A8295EB24D00D344AC /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D093A7295EB24C00D344AC /* AddTaskVC.swift */; };
@@ -45,8 +49,6 @@
 		35646E0D296AAC3E00D0A2B5 /* Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		35646E0F296ABF7C00D0A2B5 /* StartPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageVC.swift; sourceTree = "<group>"; };
 		35646E12296B0D9300D0A2B5 /* TaskStorageCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskStorageCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		35646E21296B15DD00D0A2B5 /* StudyTaskModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTaskModel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		35646E22296B15DD00D0A2B5 /* StudyTaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		35646E25296B163800D0A2B5 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		35F717AE295DDC6E0059DA50 /* studying.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = studying.json; sourceTree = "<group>"; };
 		35F717B0295DE3AE0059DA50 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
@@ -57,6 +59,12 @@
 		35F92DCD2969BD7200270F2F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		35F92DD02969D79F00270F2F /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		35F92DD3296A0DC200270F2F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8980F743296C2D2B00134BBF /* StudyTaskModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTaskModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8980F744296C2D2B00134BBF /* StudyTaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8980F745296C2D2B00134BBF /* ContactModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8980F746296C2D2B00134BBF /* ContactModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8980F747296C2D2B00134BBF /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8980F748296C2D2B00134BBF /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		89B9CC062966C5C600BA8EFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89BF1C742962E28900B503B4 /* done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = done.json; sourceTree = "<group>"; };
 		89D093A7295EB24C00D344AC /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
@@ -90,8 +98,12 @@
 		35646E18296B148000D0A2B5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				35646E21296B15DD00D0A2B5 /* StudyTaskModel+CoreDataClass.swift */,
-				35646E22296B15DD00D0A2B5 /* StudyTaskModel+CoreDataProperties.swift */,
+				8980F743296C2D2B00134BBF /* StudyTaskModel+CoreDataClass.swift */,
+				8980F744296C2D2B00134BBF /* StudyTaskModel+CoreDataProperties.swift */,
+				8980F745296C2D2B00134BBF /* ContactModel+CoreDataClass.swift */,
+				8980F746296C2D2B00134BBF /* ContactModel+CoreDataProperties.swift */,
+				8980F747296C2D2B00134BBF /* UserModel+CoreDataClass.swift */,
+				8980F748296C2D2B00134BBF /* UserModel+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -265,16 +277,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F717B1295DE3AE0059DA50 /* TaskList.swift in Sources */,
+				8980F74C296C2D2B00134BBF /* ContactModel+CoreDataProperties.swift in Sources */,
 				89D7766D295DA18E00992F72 /* Constants.swift in Sources */,
+				8980F74B296C2D2B00134BBF /* ContactModel+CoreDataClass.swift in Sources */,
 				35646E0E296AAC3E00D0A2B5 /* Plist.swift in Sources */,
 				35646E26296B163800D0A2B5 /* CoreDataHelper.swift in Sources */,
 				35F92DD4296A0DC200270F2F /* ProfileVC.swift in Sources */,
 				35F92DD12969D79F00270F2F /* Keychain.swift in Sources */,
 				35F92DCE2969BD7200270F2F /* SignInVC.swift in Sources */,
-				35646E23296B15DD00D0A2B5 /* StudyTaskModel+CoreDataClass.swift in Sources */,
 				35F717B3295DEE210059DA50 /* TimerVC.swift in Sources */,
+				8980F74A296C2D2B00134BBF /* StudyTaskModel+CoreDataProperties.swift in Sources */,
 				35646E10296ABF7C00D0A2B5 /* StartPageVC.swift in Sources */,
+				8980F74D296C2D2B00134BBF /* UserModel+CoreDataClass.swift in Sources */,
 				35F92DCB2969B56C00270F2F /* SignUpVC.swift in Sources */,
+				8980F749296C2D2B00134BBF /* StudyTaskModel+CoreDataClass.swift in Sources */,
 				89D7766F295DA4F500992F72 /* gifLoader.swift in Sources */,
 				89D093A8295EB24D00D344AC /* AddTaskVC.swift in Sources */,
 				89D77659295D799A00992F72 /* ViewController.swift in Sources */,
@@ -282,8 +298,8 @@
 				35646E0C296A8D8600D0A2B5 /* UserDefaults.swift in Sources */,
 				89D77657295D799A00992F72 /* SceneDelegate.swift in Sources */,
 				35646E13296B0D9300D0A2B5 /* TaskStorageCoreDataModel.xcdatamodeld in Sources */,
+				8980F74E296C2D2B00134BBF /* UserModel+CoreDataProperties.swift in Sources */,
 				89B9CC072966C5C600BA8EFD /* User.swift in Sources */,
-				35646E24296B15DD00D0A2B5 /* StudyTaskModel+CoreDataProperties.swift in Sources */,
 				89D7766A295DA0C500992F72 /* TaskCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

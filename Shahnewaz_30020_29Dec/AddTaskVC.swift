@@ -43,7 +43,7 @@ class AddTaskVC: UIViewController {
             let userId = loggedInfo[Constants.pListUserId]! as! String
             
             let newTask = StudyTaskModel(context: CoreDataHelper.context)
-            newTask.userId = userId
+            //newTask.userId = userId
             newTask.taskId = nil
             newTask.subject = subjectInput.text ?? ""
             newTask.topic = topicInput.text ?? ""
