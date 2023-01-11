@@ -42,16 +42,7 @@ class AddTaskVC: UIViewController {
         if let loggedInfo = loggedInfo {
             let userId = loggedInfo[Constants.pListUserId]! as! String
             
-            let newTask = StudyTaskModel(context: CoreDataHelper.context)
-            //newTask.userId = userId
-            newTask.taskId = nil
-            newTask.subject = subjectInput.text ?? ""
-            newTask.topic = topicInput.text ?? ""
-            newTask.duration = Int32(duration)
-            newTask.progress = 0
-            newTask.priority = priorityInput.text ?? ""
-            newTask.isDone = false
-            CoreDataHelper().addRecord(task: newTask)
+            CoreDataHelper().addTask(userId: userId, taskId: String(Int.random(in: 1...999)), subject: subjectInput.text ?? "", topic: topicInput.text ?? "", duration: Int32(duration), progress: 0, priority: priorityInput.text ?? "", isDone: false)
             
             NotificationCenter.default.post(name: Constants.refreshTaskListNotificationName, object: nil)
             dismiss(animated: true)

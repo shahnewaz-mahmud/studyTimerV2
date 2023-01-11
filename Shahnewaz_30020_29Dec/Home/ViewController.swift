@@ -21,10 +21,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        CoreDataHelper().getAllRecords()
+        
+        syncUserDetails()
+        getAllUserTasks()
+       
+        
         print("Total Data",StudyTaskModel.studyTasks.count)
         
-        updateHomeHeader()
+        
+        midBackground.layer.cornerRadius = 50
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -38,15 +43,30 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = collectionViewCellLayout
         
         NotificationCenter.default.addObserver(self, selector: #selector(refreshTaskList), name: Constants.refreshTaskListNotificationName, object: nil)
-        syncUserDetails()
+        
+        
     }
-
+    
+    
+    @IBAction func taskSegmentAction(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0
+        {
+            getAllUserTasks()
+            refreshTaskList()
+        }else
+        {
+            getAllCompletedTasks()
+            refreshTaskList()
+        }
+    }
+    
     
     func updateHomeHeader(){
-        midBackground.layer.cornerRadius = 50
-        let userInfo = UserDefaultsHelper().getSavedData(key: Constants.userDefaultsLoggedUser)
-        
-        userName.text = userInfo?.firstName
+        DispatchQueue.main.async {
+            let userInfo = UserDefaultsHelper().getSavedData(key: Constants.userDefaultsLoggedUser)
+            self.userName.text = userInfo?.firstName
+        }
     }
     
     @objc func refreshTaskList() {
@@ -64,6 +84,7 @@ class ViewController: UIViewController {
         let loggedInfo = PlistHelper().getData()
         if let loggedInfo = loggedInfo {
             let userId = loggedInfo[Constants.pListUserId]! as! String
+            print(userId)
             
             guard let url = URL(string: Constants.apidomain + "users/" + userId) else { return }
             URLSession.shared.dataTask(with: url) { data, response, error in
@@ -72,10 +93,29 @@ class ViewController: UIViewController {
                     print("There was an error: \(error.localizedDescription)")
                 } else {
                     UserDefaultsHelper().saveData(data: data!, key: Constants.userDefaultsLoggedUser)
+                    self.updateHomeHeader()
                 }
             }.resume()
         }
  
+    }
+    
+    func getAllUserTasks()
+    {
+        let loggedInfo = PlistHelper().getData()
+        if let loggedInfo = loggedInfo {
+            let userId = loggedInfo[Constants.pListUserId]! as! String
+            CoreDataHelper().getAllTask(userId: userId)  
+        }
+    }
+    
+    func getAllCompletedTasks()
+    {
+        let loggedInfo = PlistHelper().getData()
+        if let loggedInfo = loggedInfo {
+            let userId = loggedInfo[Constants.pListUserId]! as! String
+            CoreDataHelper().getAllDoneRecords(userId: userId)
+        }
     }
 }
 
